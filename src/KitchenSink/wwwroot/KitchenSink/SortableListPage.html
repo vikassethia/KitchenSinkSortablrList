@@ -8,16 +8,14 @@
                 <th>Name</th>
                 <th>SortOrder</th>
                 <th>Up</th>
-                <th>
-                    Down
-                </th>
+                <th>Down</th>
             </tr>
             </thead>
             <tbody>
             <template is="dom-repeat" items="{{model.Peoples::value-changed}}" >
                 <tr>
                     <td>{{item.FirstName}} {{item.LastTime}}</td>
-                    <td>{{item.SortOrder}}</td>
+                    <td id="sortOrder">{{item.SortOrder}}</td>
 
                     <td>
                         <template is="dom-if" if="{{!item.IsFirst$}}" restamp>
@@ -31,7 +29,6 @@
                     </td>
                 </tr>
             </template>
-
             </tbody>
         </table>
         <dom-bind-notifier path="model" observed-object="{{Peoples}}" deep></dom-bind-notifier>

@@ -11,23 +11,23 @@ namespace KitchenSink.Tests.Ui.SectionArray
             PageFactory.InitElements(Driver, this);
         }
 
-        [FindsBy(How = How.XPath, Using = "//button[text() = 'Up']")]
-        public IWebElement AddUpButton { get; set; }
+        [FindsBy(How = How.XPath, Using = ".fa-thumbs-up[last()]")]
+        public IWebElement UpButton { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//button[text() = 'Down']")]
-        public IWebElement AddDownButton { get; set; }
+        [FindsBy(How = How.XPath, Using = ".fa-thumbs-down[1]")]
+        public IWebElement DownButton { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//table[@class='htCore']//tbody//tr")]
+        [FindsBy(How = How.XPath, Using = "//table[@class='table-striped']//tbody//tr")]
         public IList<IWebElement> PeopelTableRows { get; set; }
 
         public void Up()
         {
-            ClickOn(AddUpButton);
+            ClickOn(UpButton);
         }
 
         public void Down()
         {
-            ClickOn(AddDownButton);
+            ClickOn(DownButton);
         }
     }
 }

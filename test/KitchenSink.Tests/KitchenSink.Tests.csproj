@@ -65,6 +65,7 @@
     <Compile Include="Test\SectionArray\RadiolistPageTest.cs" />
     <Compile Include="Test\SectionArray\RadioPageTest.cs" />
     <Compile Include="Test\BaseTest.cs" />
+    <Compile Include="Test\SectionArray\SortableListPageTest.cs" />
     <Compile Include="Test\SectionBoolean\CheckboxPageTest.cs" />
     <Compile Include="Test\SectionBoolean\ToggleButtonPageTest.cs" />
     <Compile Include="Test\SectionCustom\AutoCompletePageTest.cs" />
