@@ -1,0 +1,39 @@
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<template>
+    <template is="dom-bind">
+
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>SortOrder</th>
+                <th>Up</th>
+                <th>
+                    Down
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <template is="dom-repeat" items="{{model.Peoples::value-changed}}" >
+                <tr>
+                    <td>{{item.FirstName}} {{item.LastTime}}</td>
+                    <td>{{item.SortOrder}}</td>
+
+                    <td>
+                        <template is="dom-if" if="{{!item.IsFirst$}}" restamp>
+                            <i class="fa fa-thumbs-up" style="font-size: 30px;" value="{{item.Up$::mouseup}}" onmousedown="++this.value"></i>
+                        </template>
+                    </td>
+                    <td>
+                        <template is="dom-if" if="{{!item.IsLast$}}" restamp>
+                            <i class="fa fa-thumbs-down" style="font-size: 30px;" value="{{item.Down$::mouseup}}" onmousedown="++this.value"></i>
+                        </template>
+                    </td>
+                </tr>
+            </template>
+
+            </tbody>
+        </table>
+        <dom-bind-notifier path="model" observed-object="{{Peoples}}" deep></dom-bind-notifier>
+    </template>
+</template>

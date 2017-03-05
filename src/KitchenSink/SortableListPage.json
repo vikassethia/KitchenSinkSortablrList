@@ -1,0 +1,17 @@
+{
+  "Html": "/KitchenSink/SortableListPage.html",
+
+  "Peoples": [
+    {
+      "Id": 0,
+      "FirstName": "",
+      "LastTime": "",
+      "SortOrder": 0,
+      "IsFirst$": false,
+      "IsLast$": false,
+      "Up$": 0,
+      "Down$": 0
+      }
+  ]
+
+}
